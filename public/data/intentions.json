@@ -1,0 +1,142 @@
+[
+  {
+    "intention": "Investigate Strange Occurrences",
+    "loop": 1,
+    "npc": "Dr. Gideon Finck",
+    "prerequisite": "Take Purple Pill, Commit to Memory or Fantasy",
+    "reward": "+1 Inspiration, Memory: You're in a Time Loop"
+  },
+  {
+    "intention": "Leave This Godforsaken Place",
+    "loop": 2,
+    "npc": "None",
+    "prerequisite": "Realize you're in a Time Loop",
+    "reward": "Discover loop boundary at 8:47"
+  },
+  {
+    "intention": "Fix Vending Machine",
+    "loop": 4,
+    "npc": "Riley",
+    "prerequisite": "Learn fix method from Robin at reception",
+    "reward": "+1 Inspiration, Riley's friendship, Unlock Kuiper Belt bar"
+  },
+  {
+    "intention": "Steal the Fancy Sports Car",
+    "loop": 5,
+    "npc": "None",
+    "prerequisite": "Discover Sports Car at Kuiper Belt parking lot",
+    "reward": "Fast travel capability, Access to northern areas"
+  },
+  {
+    "intention": "Eavesdrop on the Lady with a Big Hat",
+    "loop": 7,
+    "npc": "Anitta",
+    "prerequisite": "Arrive at Kuiper Belt before 8:25, Hide behind barrel",
+    "reward": "Memory: Controlling Lady with a Big Hat, Learn about Gas Station"
+  },
+  {
+    "intention": "Search Anitta's Car",
+    "loop": 8,
+    "npc": "Maxine Kay",
+    "prerequisite": "Get Wi-Fi password from Gas Station, Watch unlock tutorial video",
+    "reward": "Anitta's Notebook with phone number, New contact info"
+  },
+  {
+    "intention": "Find Anitta's Old Stuff",
+    "loop": 8,
+    "npc": "Ben Fleming",
+    "prerequisite": "Call Ben about Anitta, Access Lost and Found room at Motel",
+    "reward": "Discover Anitta's song videotape, +1 Inspiration from poster"
+  },
+  {
+    "intention": "Play Anitta's Song",
+    "loop": 9,
+    "npc": "Anitta",
+    "prerequisite": "Find Anitta's Old Stuff, Play piano at Kuiper Belt at 8:25",
+    "reward": "Anitta opens up about her past, Unlock rooftop conversation"
+  },
+  {
+    "intention": "Enter Frank's Room",
+    "loop": 10,
+    "npc": "Robin Fleming / Jason Burns",
+    "prerequisite": "Get Master Key Card from Jason Burns's nightstand in Room 5",
+    "reward": "Frank's documents, Memory: Guiding Light Accident, Frank's Phone"
+  },
+  {
+    "intention": "Access Frank's Phone",
+    "loop": 11,
+    "npc": "Robin Fleming / Maxine Kay",
+    "prerequisite": "Charge phone with Robin, Get password hint from Maxine (5839-Judy)",
+    "reward": "Memory: The Signal, Alex Kay connection, Phone persists across loops"
+  },
+  {
+    "intention": "Get Inside Dr. Finck's Room",
+    "loop": 12,
+    "npc": "Dr. Gideon Finck",
+    "prerequisite": "Master Key Card, Enter during thunder at 8:38, Hide under couch",
+    "reward": "Critical documents, Memory: The Incident, Story progression"
+  },
+  {
+    "intention": "Unlock Back Door",
+    "loop": 1,
+    "npc": "None",
+    "prerequisite": "Explore Motel grounds",
+    "reward": "Access to Garden Area behind Motel"
+  },
+  {
+    "intention": "Recall Dream: The Checkout",
+    "loop": 9,
+    "npc": "Dr. Gideon Finck",
+    "prerequisite": "Accumulate enough Inspiration, Commit Willpower",
+    "reward": "Memory of past event, Additional dialogue with Dr. Finck"
+  },
+  {
+    "intention": "Discover Coral Destiny",
+    "loop": 5,
+    "npc": "Riley / Robin Fleming",
+    "prerequisite": "Talk to Riley about Ben Fleming, Talk to Robin",
+    "reward": "Memory: Coral Destiny connection, Background story"
+  },
+  {
+    "intention": "Investigate Careless Driver",
+    "loop": 7,
+    "npc": "Robin Fleming",
+    "prerequisite": "Witness transformer crash, Wait for thunder at 8:38",
+    "reward": "Memory: Careless Driver is Frank in Room 101"
+  },
+  {
+    "intention": "Learn About Judy the Astronaut",
+    "loop": 11,
+    "npc": "Maxine Kay",
+    "prerequisite": "Discuss Guiding Light Accident with Maxine",
+    "reward": "Memory: Judy was Frank's girlfriend, Phone password clue"
+  },
+  {
+    "intention": "Find Inspiration at Gas Station",
+    "loop": 8,
+    "npc": "Maxine Kay",
+    "prerequisite": "Enter Gas Station, Inspect cat poster on wall",
+    "reward": "+1 Inspiration"
+  },
+  {
+    "intention": "Find Inspiration at Motel",
+    "loop": 8,
+    "npc": "None",
+    "prerequisite": "Check poster on wall near stairs",
+    "reward": "+1 Inspiration"
+  },
+  {
+    "intention": "Find Inspiration at Kuiper Belt",
+    "loop": 4,
+    "npc": "None",
+    "prerequisite": "Inspect flower in Kuiper Belt parking lot",
+    "reward": "+1 Inspiration"
+  },
+  {
+    "intention": "Eavesdrop on Robin and Jason",
+    "loop": 10,
+    "npc": "Robin Fleming / Jason Burns",
+    "prerequisite": "Arrive at Reception at correct time, Listen to conversation",
+    "reward": "Learn about Jason Burns's background and relationship with Robin"
+  }
+]

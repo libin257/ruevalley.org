@@ -42,12 +42,15 @@ export function SteamGauge() {
 
   // Calculate review percentage
   const totalReviews = steamData.positive + steamData.negative
-  const reviewRate = totalReviews > 0
+  const hasReviews = totalReviews > 0
+
+  const reviewRate = hasReviews
     ? Math.round((steamData.positive / totalReviews) * 100)
-    : 0
+    : 75 // Default display value when no reviews
 
   // Determine color based on percentage
   const getColor = (rate: number) => {
+    if (!hasReviews) return '#6B7280' // Gray for no data
     if (rate >= 80) return '#25AB2B' // Green
     if (rate >= 60) return '#F59E0B' // Amber
     return '#EF4444' // Red
@@ -59,7 +62,7 @@ export function SteamGauge() {
   const chartData = [
     {
       name: 'Reviews',
-      value: reviewRate,
+      value: hasReviews ? reviewRate : 75, // Show partial circle when no reviews
       fill: chartColor,
     },
   ]
@@ -107,19 +110,38 @@ export function SteamGauge() {
             </ResponsiveContainer>
             <div className="absolute" style={{ marginTop: '-160px' }}>
               <div className="text-center">
-                <div className="text-5xl font-bold text-white" style={{ color: chartColor }}>
-                  {reviewRate}%
-                </div>
-                <div className="text-sm text-gray-300 mt-2">{getReviewStatus(reviewRate)}</div>
+                {hasReviews ? (
+                  <>
+                    <div className="text-5xl font-bold text-white" style={{ color: chartColor }}>
+                      {reviewRate}%
+                    </div>
+                    <div className="text-sm text-gray-300 mt-2">{getReviewStatus(reviewRate)}</div>
+                  </>
+                ) : (
+                  <>
+                    <div className="text-3xl font-bold text-gray-400">
+                      Coming Soon
+                    </div>
+                    <div className="text-sm text-gray-500 mt-2">即将上线</div>
+                  </>
+                )}
               </div>
             </div>
             <div className="mt-4 text-center">
-              <p className="text-sm text-gray-400">
-                {steamData.positive.toLocaleString()} 好评 / {steamData.negative.toLocaleString()} 差评
-              </p>
-              <p className="text-xs text-gray-500 mt-1">
-                共 {totalReviews.toLocaleString()} 条评价
-              </p>
+              {hasReviews ? (
+                <>
+                  <p className="text-sm text-gray-400">
+                    {steamData.positive.toLocaleString()} 好评 / {steamData.negative.toLocaleString()} 差评
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    共 {totalReviews.toLocaleString()} 条评价
+                  </p>
+                </>
+              ) : (
+                <p className="text-sm text-gray-500">
+                  等待玩家评价中...
+                </p>
+              )}
             </div>
           </div>
 

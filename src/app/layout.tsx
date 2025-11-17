@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brother Hai Restaurant - The Viral Vietnamese Horror Game",
-  description: "Discover Brother Hai Restaurant, the viral Vietnamese indie horror game. Download safely, explore endings, learn about the Google Maps phenomenon & join millions of players worldwide.",
+  title: "Rue Valley - Complete Guide & Walkthrough Portal",
+  description: "Your ultimate resource for the time loop RPG Rue Valley - Complete walkthrough, character guides, intention tree search, and community insights.",
 };
 
 export default function RootLayout({
@@ -38,13 +38,16 @@ export default function RootLayout({
         <ClientBody>
           <div
             className="relative min-h-screen bg-cover bg-center bg-fixed"
-            style={{ backgroundImage: 'url(/background.jpeg)' }}
+            style={{ backgroundImage: 'url(/images/backgrounds/hero-bg.jpg)' }}
           >
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+            <div className="relative z-10">
+              <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </div>
         </ClientBody>
       </body>

@@ -41,8 +41,31 @@ async function fetchSteamData() {
     console.log(`   - Estimated owners: ${data.owners}`)
 
   } catch (error) {
-    console.error('❌ Failed to fetch Steam data:', error.message)
-    process.exit(1)
+    console.warn('⚠️  Failed to fetch Steam data:', error.message)
+    console.log('📁 Checking for existing data...')
+
+    try {
+      await fs.access(OUTPUT_PATH)
+      console.log('✅ Using existing Steam data from cache')
+      return
+    } catch {
+      console.warn('⚠️  No cached data found. Creating fallback data...')
+
+      // Create fallback data so build doesn't fail
+      const fallbackData = {
+        fetchedAt: Date.now(),
+        name: 'Rue Valley',
+        positive: 0,
+        negative: 0,
+        owners: '0 .. 20,000',
+        price: '2699',
+        scoreRank: ''
+      }
+
+      await fs.mkdir('./public/data', { recursive: true })
+      await fs.writeFile(OUTPUT_PATH, JSON.stringify(fallbackData, null, 2))
+      console.log('✅ Fallback data created. Build can continue.')
+    }
   }
 }
 
